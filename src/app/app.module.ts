@@ -21,7 +21,8 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
+  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'add', component: AddTutorialComponent },
@@ -32,7 +33,6 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
