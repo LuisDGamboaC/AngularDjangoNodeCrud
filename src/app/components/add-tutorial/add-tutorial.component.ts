@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Tutorial } from 'src/app/models/tutorial.model';
 import { TutorialService } from 'src/app/services/tutorial.service';
 
@@ -7,7 +7,7 @@ import { TutorialService } from 'src/app/services/tutorial.service';
   templateUrl: './add-tutorial.component.html',
   styleUrls: ['./add-tutorial.component.css']
 })
-export class AddTutorialComponent implements OnInit {
+export class AddTutorialComponent {
 
   tutorial: Tutorial = {
     title: '',
@@ -17,9 +17,6 @@ export class AddTutorialComponent implements OnInit {
   submitted = false;
 
   constructor(private tutorialService: TutorialService) { }
-
-  ngOnInit(): void {
-  }
 
   saveTutorial(): void {
     const data = {
